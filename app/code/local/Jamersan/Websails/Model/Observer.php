@@ -15,7 +15,9 @@ class Jamersan_Websails_Model_Observer {
 			$row = $data[$i];
 			
 			//see if product exist to define operation type
-			if (Mage::getModel('catalog/product')->load($row[5])->getName() != null) {
+			$product = Mage::getModel('catalog/product');
+			
+			if ($product->load($product->getIdBySku($row[5]))->getName() != null) {
 				$action = 'update';
 			} else {
 				$action = 'create';
