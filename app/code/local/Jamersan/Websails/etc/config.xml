@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <models>
+            <websails>
+                <class>Jamersan_Websails_Model</class>
+            </websails>                         
+        </models>
+    </global>
+    <crontab>
+        <jobs>
+            <websails_cron>
+                <schedule>
+                    <cron_expr>* * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>websails/observer::run</model>
+                </run>
+            </websails_cron>
+        </jobs>
+    </crontab>
+</config>
