@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <config>
+	<modules>
+        <Jamersan_Websails>
+            <version>0.1.0</version>
+        </Jamersan_Websails>
+    </modules>
     <global>
         <models>
             <websails>
